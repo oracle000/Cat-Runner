@@ -7,11 +7,16 @@ public class MenuController : MonoBehaviour
 	[SerializeField] private Slider MusicSlider;
 	[SerializeField] private Slider SFXSlider;
 
-	private AudioSource ad;
+	private AudioSource audioSource;
 
 	private void Start()
-	{		
-		ad = GetComponent<AudioSource>();		
+	{
+		audioSource = GetComponent<AudioSource>();		
+	}
+
+	private void Update()
+	{
+		audioSource.volume = SoundManager.instance.SFX;
 	}
 
 	public void OnUpdateMusicSlider(float value)
@@ -24,11 +29,16 @@ public class MenuController : MonoBehaviour
 		SoundManager.instance.SFX = value;
 	}
 
+
 	public void OnClickSettings()
 	{
 		MusicSlider.value = SoundManager.instance.Music;
 		SFXSlider.value = SoundManager.instance.SFX;
-		ad.volume = SoundManager.instance.SFX;
-		ad.Play();		
+		audioSource.Play();		
+	}
+
+	public void OnClickBack()
+	{
+		audioSource.Play();
 	}
 }
