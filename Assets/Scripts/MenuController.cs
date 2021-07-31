@@ -19,6 +19,12 @@ public class MenuController : MonoBehaviour
 		audioSource.volume = SoundManager.instance.SFX;
 	}
 
+	public void LoadCharacterScene()
+	{
+		GameManager.instance.MoveToCharacterScene();
+		audioSource.Play();
+	}
+
 	public void OnUpdateMusicSlider(float value)
 	{
 		SoundManager.instance.Music = value;		
@@ -28,7 +34,6 @@ public class MenuController : MonoBehaviour
 	{
 		SoundManager.instance.SFX = value;
 	}
-
 
 	public void OnClickSettings()
 	{
