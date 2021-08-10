@@ -40,7 +40,7 @@ public class ScrollingBackgroundController : MonoBehaviour
 
 	private void SampleFunction()
 	{
-		Debug.Log("Hello user")
+		Debug.Log("Hello user");
 	}
 	
 }
