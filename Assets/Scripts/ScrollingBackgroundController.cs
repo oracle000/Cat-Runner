@@ -37,6 +37,8 @@ public class ScrollingBackgroundController : MonoBehaviour
 		GameManager.instance.backgroundImageX = BackgroundImage.transform.position.x;
 		GameManager.instance.backgroundImageY = BackgroundImage.transform.position.y;
 
+
+
 	}
 	
 }
