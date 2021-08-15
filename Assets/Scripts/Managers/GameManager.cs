@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public float backgroundImageX = 0;
     public float backgroundImageY = 0;
 
-    public int characterSelect = 0;
+    public string characterSelect = "";
 
     public void MoveToCharacterScene()
 	{

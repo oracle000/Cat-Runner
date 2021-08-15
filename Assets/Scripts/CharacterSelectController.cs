@@ -11,7 +11,7 @@ public class CharacterSelectController : MonoBehaviour
 	}
 	
 	public void SelectCharacter()
-	{
-		GameManager.instance.characterSelect = 1;
+	{		
+		GameManager.instance.characterSelect = character;
 	}
 }

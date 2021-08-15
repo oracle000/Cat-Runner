@@ -12,8 +12,7 @@ public class ScrollingBackgroundController : MonoBehaviour
 		BackgroundImage.transform.position = new Vector3(
 			GameManager.instance.backgroundImageX,
 			GameManager.instance.backgroundImageY,
-			BackgroundImage.transform.position.z);
-		
+			BackgroundImage.transform.position.z);		
 	}
 
 	private void Update()
