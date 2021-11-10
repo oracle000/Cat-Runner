@@ -4,7 +4,10 @@ public class SoundManager : MonoBehaviour
 {
 	public static SoundManager instance;
 	public float Music = 1;
-	public float SFX = 1;	
+	public float SFX = 1;
+	
+	public AudioSource MainMenuBackgroundMusic;
+	public AudioSource SFXButtonEffect;
 
 	private void Awake()
 	{

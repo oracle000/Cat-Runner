@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +23,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
 	}
 
+    public void MoveToLoadingScreen()
+	{
+        SceneManager.LoadScene(2);        
+	}
+
+	public void MoveToLevel1()
+	{        
+        StartCoroutine(AddDelayLevel1());        
+	}
+
 	private void Awake()
 	{
         MakeSingleton();	
@@ -38,6 +49,13 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+
+    public IEnumerator AddDelayLevel1()
+	{
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(3);
     }
     
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MenuController : MonoBehaviour
 {
 
@@ -11,7 +12,7 @@ public class MenuController : MonoBehaviour
 
 	private void Start()
 	{
-		audioSource = GetComponent<AudioSource>();		
+		audioSource = SoundManager.instance.SFXButtonEffect;
 	}
 
 	private void Update()
@@ -22,6 +23,7 @@ public class MenuController : MonoBehaviour
 	public void LoadCharacterScene()
 	{
 		GameManager.instance.MoveToCharacterScene();
+		
 		audioSource.Play();
 	}
 
