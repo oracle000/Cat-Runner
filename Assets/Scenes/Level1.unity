@@ -11820,6 +11820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251fa1ae34e7e0c429fda20b9f61d661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1753531184
 GameObject:
   m_ObjectHideFlags: 0
@@ -14939,7 +14942,7 @@ GameObject:
   - component: {fileID: 2062740343}
   - component: {fileID: 2062740342}
   - component: {fileID: 2062740341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
