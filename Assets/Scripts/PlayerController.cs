@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour
 
         if (movement > 0 )
 		{
-            transform.Translate(new Vector3(3 * Time.deltaTime, 0, 0), Space.Self);
+            transform.Translate(new Vector3(4 * Time.deltaTime, 0, 0), Space.Self);
             transform.localScale = new Vector3(1, 1, 1);
             SetJumpRunAnimation(jumping);
         } else if (movement < 0)
 		{           
-            transform.Translate(new Vector3(-3 * Time.deltaTime, 0, 0), Space.Self);
+            transform.Translate(new Vector3(-4 * Time.deltaTime, 0, 0), Space.Self);
             transform.localScale = new Vector3(-1, 1, 1);
             SetJumpRunAnimation(jumping);            
         } else if (movement == 0 && jumping == 0)
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (jumping > 0 && _collider.IsTouchingLayers(ground))
 		{        
-			_rb.velocity = new Vector2(_rb.velocity.x, 5f);            
+			_rb.velocity = new Vector2(_rb.velocity.x, 8f);            
             _animator.SetBool("AlfredoJump", true);
 	    } 
     }
